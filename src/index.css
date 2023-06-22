@@ -1,4 +1,4 @@
-@import-normalize; /* bring in normalize.css styles */
+@import './components/reset.css';
 
 body {
   margin: 0;
@@ -7,8 +7,29 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(
+    100deg,
+    #a14258,
+    #b37a40,
+    #3e655f,
+    #aa535d,
+    #5d75a5
+  );
+  background-size: 600% 600%;
+  animation: gradientAnimation 10s ease-in-out infinite;
 }
 
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
